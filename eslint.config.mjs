@@ -20,6 +20,12 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  {
+    extends: "next/core-web-vitals",
+    rules: {
+      "react/no-unescaped-entities": 0,
+    },
+  },
 ];
 
 export default eslintConfig;
