@@ -2,6 +2,9 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { ArrowDownToLine } from "lucide-react";
 
 const Intro = () => {
   return (
@@ -53,6 +56,26 @@ const Intro = () => {
         building <span className="italic">websites and apps.</span> My focus is{" "}
         <span className="underline">React (Next js)</span>
       </motion.p>
+
+      {/*.Buttons... */}
+      <motion.div
+        className="flex font-medium justify-center gap-2"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        <Link
+          href=""
+          className="group bg-gray-900 flex items-center rounded-4xl space-x-2 px-7 py-3 w-max text-white text-[0.9rem] outline-none focus:scale-110 hover:scale-110 cursor-pointer hover:bg-gray-950 active:scale-105 transition"
+        >
+          Contact me here{"  "}
+          <ArrowRight className="size-4 opacity-70 group-hover:translate-x-1 transition" />
+        </Link>
+        <a className="bg-white flex items-center px-7 py-3 text-sm rounded-4xl cursor-pointer">
+          Download CV{" "}
+          <ArrowDownToLine className="size-4 opacity-70 group-hover:translate-x-1 transition" />
+        </a>
+      </motion.div>
     </section>
   );
 };
