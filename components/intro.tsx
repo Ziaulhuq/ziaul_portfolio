@@ -5,10 +5,12 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ArrowDownToLine } from "lucide-react";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 
 const Intro = () => {
   return (
-    <section className="mb-28 text-center sm:mb-0">
+    <section className="mb-28 text-center sm:mb-0 transition">
       <div className="flex items-center justify-center mt-7">
         <div className="mt-23 sm:mt-15 relative">
           <motion.div
@@ -46,7 +48,7 @@ const Intro = () => {
       </div>
 
       <motion.p
-        className="mb-10 mt-4 px-4 text-md font-medium leading-[1.6] sm:text-lg"
+        className="mb-10 mt-4 px-4 text-md font-medium leading-[1.6] sm:text-l transition"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -59,21 +61,35 @@ const Intro = () => {
 
       {/*.Buttons... */}
       <motion.div
-        className="flex font-medium justify-center gap-2"
+        className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center font-medium gap-2 transition"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
         <Link
           href=""
-          className="group bg-gray-900 flex items-center rounded-4xl space-x-2 px-7 py-3 w-max text-white text-[0.9rem] outline-none focus:scale-110 hover:scale-110 cursor-pointer hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 flex items-center rounded-4xl gap-2 px-7 py-3 text-white text-[0.9rem] outline-none focus:scale-110 hover:scale-110 cursor-pointer hover:bg-gray-950 active:scale-105 transition"
         >
-          Contact me here{"  "}
+          Contact me here
           <ArrowRight className="size-4 opacity-70 group-hover:translate-x-1 transition" />
         </Link>
-        <a className="bg-white flex items-center px-7 py-3 text-sm rounded-4xl cursor-pointer">
+        <a className="group bg-white text-gray-700 flex items-center gap-2 px-7 py-3 outline-none focus:scale-110 hover:scale-110 active:scale-110 text-sm rounded-4xl cursor-pointer border border-black/10 transition">
           Download CV{" "}
-          <ArrowDownToLine className="size-4 opacity-70 group-hover:translate-x-1 transition" />
+          <ArrowDownToLine className="group size-4 opacity-70 group-hover:translate-y-1" />
+        </a>
+        <a
+          className="flex items-center p-3 bg-white rounded-full text-gray-700 border border-black/10 outline-none hover:scale-[1.10] active:scale-105 transition"
+          href="https://www.linkedin.com/in/ziaul-huq-19014b5a/"
+          target="_blank"
+        >
+          <FaLinkedinIn className="text-[1.2rem] opacity-70 cursor-pointer" />
+        </a>
+        <a
+          className="flex items-center p-3 bg-white rounded-full text-gray-700  border border-black/10 outline-none hover:scale-[1.10] active:scale-105 transition cursor-pointer"
+          href="https://github.com/Ziaulhuq"
+          target="_blank"
+        >
+          <FaGithub className="text-[1.2rem] opacity-70" />
         </a>
       </motion.div>
     </section>
