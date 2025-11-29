@@ -18,6 +18,7 @@ const Intro = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               type: "tween",
+              delay: 0.1,
               duration: 0.2,
             }}
           >
@@ -48,7 +49,7 @@ const Intro = () => {
       </div>
 
       <motion.p
-        className="mb-10 mt-4 px-4 text-md font-medium leading-[1.6] sm:text-l transition"
+        className="mb-10 mt-4 px-4 text-md font-medium !leading-[1.6] sm:text-l transition"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -64,16 +65,19 @@ const Intro = () => {
         className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center font-medium gap-2 transition"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
       >
         <Link
           href=""
-          className="group bg-gray-900 flex items-center rounded-4xl gap-2 px-7 py-3 text-white text-[0.9rem] outline-none focus:scale-110 hover:scale-110 cursor-pointer hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 flex items-center rounded-4xl gap-2 px-7 py-3 text-white text-[0.8rem] outline-none font-medium focus:scale-110 hover:scale-110 cursor-pointer hover:bg-gray-950 active:scale-105 transition"
         >
           Contact me here
           <ArrowRight className="size-4 opacity-70 group-hover:translate-x-1 transition" />
         </Link>
-        <a className="group bg-white text-gray-700 flex items-center gap-2 px-7 py-3 outline-none focus:scale-110 hover:scale-110 active:scale-110 text-sm rounded-4xl cursor-pointer border border-black/10 transition">
+        <a
+          className="group bg-white text-gray-700 flex items-center gap-2 px-7 py-3 outline-none focus:scale-110 hover:scale-110 active:scale-110 text-sm rounded-4xl cursor-pointer border border-black/10 transition"
+          href="/CV.pdf"
+          download
+        >
           Download CV{" "}
           <ArrowDownToLine className="group size-4 opacity-70 group-hover:translate-y-1" />
         </a>

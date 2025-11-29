@@ -1,9 +1,13 @@
+import About from "@/components/about";
 import Intro from "@/components/intro";
+import SectionDivider from "@/components/section-divider";
 
 export default function Home() {
   return (
-    <div className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-84">
+    <div className="flex gap-2 flex-col justify-center items-center">
       <Intro />
+      <SectionDivider />
+      <About />
     </div>
   );
 }

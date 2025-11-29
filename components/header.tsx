@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 const Header = () => {
   return (
-    <header className="z-[999] relative ">
+    <header className="z-[99] relative ">
       <motion.div
-        className="fixed h-[7rem] left-1/2 w-full -translate-1/2 rounded-none border border-white opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top- sm:h-[2.8rem] sm:w-[36rem] sm:rounded-full"
+        className="fixed h-[10rem] left-1/2 w-full -translate-1/2 rounded-none border border-white opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-7 sm:h-[2.8rem] sm:w-[36rem] sm:rounded-full"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       ></motion.div>
