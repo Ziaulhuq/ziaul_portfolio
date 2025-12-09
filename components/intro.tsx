@@ -50,7 +50,7 @@ const Intro = () => {
 
       <motion.p
         className="mb-10 mt-4 px-4 text-md font-medium !leading-[1.6] sm:text-l transition"
-        initial={{ opacity: 0, y: 100 }}
+        initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm a ZIA UL HUQ.</span> I'm a{" "}
@@ -63,7 +63,7 @@ const Intro = () => {
       {/*.Buttons... */}
       <motion.div
         className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center font-medium gap-2 transition"
-        initial={{ opacity: 0, y: 100 }}
+        initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <Link

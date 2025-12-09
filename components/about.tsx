@@ -1,15 +1,17 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import SectionHeadings from "./sectionheading";
 
 const About = () => {
   return (
     <motion.section
-      className="text-center p-6 leading-8 max-w-[45rem]"
+      className="text-center p-6 mt-4 leading-8 max-w-[45rem]"
       initial={{ opacity: 0, y: 100 }}
-      animate={{opacity: 1, y: 0}}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.175 }}
     >
-      <h2 className="font-bold text-lg sm:mt-5 mt-[-40px] mb-5">About me</h2>
+      <SectionHeadings>About me</SectionHeadings>
       <p className="text-[15px]">
         After graduating with a degree in{" "}
         <span className="font-bold">Computer Science</span>, I decided to pursue
@@ -27,7 +29,7 @@ const About = () => {
         . I am also familiar with{" "}
         <span className="font-bold italic">TypeScript and Prisma</span>. I am
         always looking to learn new technologies. I am currently looking for
-        <span className="font-bold">full-time position</span> as a{" "}
+        <span className="font-bold"> full-time position</span> as a{" "}
         <span className="font-bold">software developer</span>.
       </p>
       <p>
