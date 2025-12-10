@@ -6,10 +6,11 @@ import SectionHeadings from "./sectionheading";
 const About = () => {
   return (
     <motion.section
-      className="text-center p-6 mt-4 leading-8 max-w-[45rem]"
+      className="text-center p-6 mt-4 leading-8 max-w-[45rem] scroll-mt-15"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
+      id="about"
     >
       <SectionHeadings>About me</SectionHeadings>
       <p className="text-[15px]">

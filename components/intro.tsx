@@ -10,7 +10,7 @@ import { FaGithub } from "react-icons/fa6";
 
 const Intro = () => {
   return (
-    <section className="mb-28 text-center sm:mb-0 transition">
+    <section id="home" className="mb-28 text-center sm:mb-0 transition">
       <div className="flex items-center justify-center mt-7">
         <div className="mt-23 sm:mt-15 relative">
           <motion.div
