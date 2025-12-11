@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { ArrowDownToLine } from "lucide-react";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
+import Typewriter from "typewriter-effect";
 
 const Intro = () => {
   return (
@@ -47,6 +48,19 @@ const Intro = () => {
           </motion.span>
         </div>
       </div>
+
+      {/* About me  */}
+
+      {/* Typr writing words  */}
+      {/* <div className="mt-8 mb-8">
+        <Typewriter
+          options={{
+            strings: ["Hello", "World"],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+      </div> */}
 
       <motion.p
         className="mb-10 mt-4 px-4 text-md font-medium !leading-[1.6] sm:text-l transition"
