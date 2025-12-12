@@ -21,7 +21,7 @@ const animationVariants = {
 const Skill = () => {
   return (
     <section
-      className="max-w-[42rem] text-center mb-28 scroll-mt-28"
+      className="max-w-[42rem] text-center mb-25 scroll-mt-28"
       id="skills"
     >
       <SectionHeadings>My Skills</SectionHeadings>
@@ -32,9 +32,6 @@ const Skill = () => {
             variants={animationVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{
-              once: true,
-            }}
             custom={index}
             className="rounded-lg px-5 py-3 border border-black/[0.08] text-[.9rem] bg-gray-50 text-gray-950 font-semibold"
           >
