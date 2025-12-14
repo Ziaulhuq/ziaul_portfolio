@@ -1,12 +1,23 @@
+"use client";
 import React from "react";
 import SectionHeadings from "./sectionheading";
 import { Send } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section
+    <motion.section
       id="contact"
       className="scroll-mt-28 sm:mb-28 mb-28 w-[min(100%, 38rem)]"
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1,
+      }}
     >
       <SectionHeadings>Contact me</SectionHeadings>
       <p className="text-[0.9rem] text-gray-700">
@@ -20,11 +31,15 @@ const Contact = () => {
         <input
           type="email"
           placeholder="Your email"
-          className="h-14 rounded-lg border p-4 border-black/10"
+          className="h-14 rounded-lg border p-4 border-black/10 focus:border focus:border-black-10 hover:border hover:border-black-10 outline-black"
+          required
+          maxLength={500}
         />
         <textarea
-          className="h-52 my-3 rounded-lg border border-black/10 p-4"
+          className="h-52 my-3 rounded-lg border border-black/10 p-4 outline-black"
           placeholder="Your message"
+          required
+          maxLength={500}
         ></textarea>
         <button
           type="submit"
@@ -34,7 +49,7 @@ const Contact = () => {
           <Send className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
         </button>
       </form>
-    </section>
+    </motion.section>
   );
 };
 
