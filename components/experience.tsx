@@ -26,7 +26,7 @@ const Experience = () => {
               contentArrowStyle={{
                 borderRight: "0.4rem solid #9ca3af",
               }}
-              date={experience.date}
+              date={experience.dateofJoining}
               icon={experience.icon}
               iconStyle={{
                 background: "white",

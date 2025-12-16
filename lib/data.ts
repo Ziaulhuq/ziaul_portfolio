@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import jjhandcraft from "@/public/jjhandcraft.png";
+import blogapp from "@/public/blogapp.png";
+import webbuilts from "@/public/webbuilts.png";
 
 export const links = [
   {
@@ -35,52 +35,59 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Web Designer",
+    location: "Chennai",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated after 6 months of studying. I immediately found a job as a web designer",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    dateofJoining: "2010 to 2012",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+    title: "Creative Developer",
+    location: "Singapore",
+    description: "I worked as a Creative developer for 3 years.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    dateofJoining: "2012 - 2015",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Front End Developer",
+    location: "Singapore",
+    description:
+      "I worked as a Front end developer for 3.5 years. I also upskilled to the full stack.",
+    icon: React.createElement(CgWorkAlt),
+    dateofJoining: "2015 - 2019",
+  },
+  {
+    title: "Freelance Developer",
+    location: "Singapore",
     description:
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    dateofJoining: "2023 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
-  },
-  {
-    title: "rmtDev",
+    title: "Blog-App",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+    imageUrl: blogapp,
   },
   {
-    title: "Word Analytics",
+    title: "JJ Handcraft",
+    description:
+      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+    tags: ["React", "Next.js", "Tailwind", "Prisma"],
+    imageUrl: jjhandcraft,
+  },
+  {
+    title: "WebBuilts",
     description:
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: webbuilts,
   },
 ] as const;
 
