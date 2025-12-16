@@ -51,28 +51,28 @@ const Intro = () => {
 
       {/* About me  */}
 
-      {/* Typr writing words  */}
-      {/* <div className="mt-8 mb-8">
-        <Typewriter
-          options={{
-            strings: ["Hello", "World"],
-            autoStart: true,
-            loop: true,
-          }}
-        />
-      </div> */}
-
-      <motion.p
+      <motion.div
         className="mb-10 mt-4 px-4 text-md font-medium !leading-[1.6] sm:text-l transition"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm a ZIA UL HUQ.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> <br /> with{" "}
-        <span className="font-bold"> 7.5 years</span> of experiencce. I enjoy
-        building <span className="italic">websites and apps.</span> My focus is{" "}
-        <span className="underline">React (Next js)</span>
-      </motion.p>
+        <span className="text-2xl font-extrabold inline-block bg-gradient-to-r from-purple-400 via-sky-600 to-purple-400 bg-clip-text text-transparent">
+          <Typewriter
+            options={{
+              strings: ["web developer", "UX designer", "Front end developer"],
+              autoStart: true,
+              loop: true,
+              delay: 75,
+              deleteSpeed: 50,
+            }}
+          />
+        </span>
+        <br />
+        with <span className="font-bold"> 7.5 years</span> of experiencce. I
+        enjoy building <span className="italic">websites and apps.</span> My
+        focus is <span className="underline">React (Next js)</span>
+      </motion.div>
 
       {/*.Buttons... */}
       <motion.div
