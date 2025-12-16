@@ -13,7 +13,7 @@ export async function handleFormData(prevState: string, formData: FormData) {
     to: "ziaulhuqbe@gmail.com",
     subject: "Message from contact form",
     replyTo: email as string,
-    text: message,
+    text: "hello",
   });
 
   if (!email && !message) {
