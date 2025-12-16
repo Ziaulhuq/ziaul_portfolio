@@ -45,7 +45,8 @@ export const experiencesData = [
   {
     title: "Creative Developer",
     location: "Singapore",
-    description: "I worked as a Creative developer for 3 years.",
+    description:
+      "I worked as a Creative developer for 3 years. before that i was only do designing, from this carrier i started to do coding also.",
     icon: React.createElement(CgWorkAlt),
     dateofJoining: "2012 - 2015",
   },
@@ -72,7 +73,7 @@ export const projectsData = [
     title: "Blog-App",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+    tags: ["React", "Next.js", "Tailwind", "Framer Motion"],
     imageUrl: blogapp,
   },
   {
@@ -86,7 +87,7 @@ export const projectsData = [
     title: "WebBuilts",
     description:
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+    tags: ["HTML", "CSS", "Javascript"],
     imageUrl: webbuilts,
   },
 ] as const;

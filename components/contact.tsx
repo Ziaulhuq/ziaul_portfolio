@@ -3,8 +3,14 @@ import React from "react";
 import SectionHeadings from "./sectionheading";
 import { Send } from "lucide-react";
 import { motion } from "framer-motion";
+import { useActionState } from "react";
+import { handleFormData } from "@/action/server-action";
 
 const Contact = () => {
+  const [formState, formAction, isPending] = useActionState(
+    handleFormData,
+    "null"
+  );
   return (
     <motion.section
       id="contact"
@@ -27,18 +33,18 @@ const Contact = () => {
         </a>{" "}
         or throughh this form
       </p>
-      <form className="flex flex-col mt-10">
+      <form action={formAction} className="flex flex-col mt-10">
         <input
           type="email"
+          name="email"
           placeholder="Your email"
           className="h-14 rounded-lg border p-4 border-black/10 focus:border focus:border-black-10 hover:border hover:border-black-10 outline-black"
-          required
           maxLength={500}
         />
         <textarea
           className="h-52 my-3 rounded-lg border border-black/10 p-4 outline-black"
           placeholder="Your message"
-          required
+          name="message"
           maxLength={500}
         ></textarea>
         <button
@@ -49,6 +55,19 @@ const Contact = () => {
           <Send className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
         </button>
       </form>
+      {isPending ? (
+        <p className="text-center text-md font-semibold">Loading...</p>
+      ) : formState?.success ? (
+        <p className="text-center mt-3 text-green-700 font-semibold ">
+          {formState?.message}
+        </p>
+      ) : (
+        formState?.success === false && (
+          <p className="text-center text-md mt-3 font-semibold text-red-800">
+            failed to send, Email & password cannot be empty
+          </p>
+        )
+      )}
     </motion.section>
   );
 };
