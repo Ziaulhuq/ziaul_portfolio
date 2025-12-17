@@ -7,7 +7,10 @@ import { useActionState } from "react";
 import { handleFormData } from "@/action/server-action";
 
 const Contact = () => {
-  const [formState, formAction, isPending] = useActionState(handleFormData, "");
+  const [formState, formAction, isPending] = useActionState(
+    handleFormData,
+    "null"
+  );
   return (
     <motion.section
       id="contact"
