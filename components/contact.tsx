@@ -14,7 +14,7 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="scroll-mt-28 sm:mb-18 mb-8 w-[min(100%, 38rem)]"
+      className="scroll-mt-28 ml-8 sm:mb-20 mb-8 w-[min(100%, 38rem)]"
       initial={{
         opacity: 0,
       }}
@@ -51,7 +51,7 @@ const Contact = () => {
         ></textarea>
         <button
           type="submit"
-          className="group flex justify-center items-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-[0.9rem] text-white hover:bg-gray-950 rounded-full outline-none focus:scale-110 hover:scale-110 transition-all active:scale-105"
+          className="group flex justify-center items-center gap-2 h-[3rem] mx-auto w-[8rem] bg-gray-900 text-[0.9rem] text-white hover:bg-gray-950 rounded-full outline-none focus:scale-110 hover:scale-110 transition-all active:scale-105 mb-4"
         >
           {isPending ? "submitting" : "submit"}{" "}
           <Send className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />

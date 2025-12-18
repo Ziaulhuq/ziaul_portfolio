@@ -11,7 +11,10 @@ import Typewriter from "typewriter-effect";
 
 const Intro = () => {
   return (
-    <section id="home" className="mb-28 text-center sm:mb-0 transition">
+    <section
+      id="home"
+      className="mb-28 ml-10 flex flex-col justify-around  text-center sm:mb-0 transition"
+    >
       <div className="flex items-center justify-center mt-7">
         <div className="mt-23 sm:mt-15 relative">
           <motion.div
@@ -52,7 +55,7 @@ const Intro = () => {
       {/* About me  */}
 
       <motion.div
-        className="mb-10 mt-4 px-4 text-md font-medium !leading-[1.6] sm:text-l transition"
+        className="mb-10 mt-4 text-md font-medium !leading-[1.6] transition"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
       >
