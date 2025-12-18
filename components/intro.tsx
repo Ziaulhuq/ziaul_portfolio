@@ -28,7 +28,7 @@ const Intro = () => {
               alt="ziaul photo"
               width="190"
               height="190"
-              quality="95"
+              quality="75"
               priority={true}
               className="w-24 h-25 rounded-full object-cover shadow-xl border-[0.35rem] border-white"
             />

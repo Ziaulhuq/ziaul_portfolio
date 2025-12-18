@@ -14,7 +14,7 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="scroll-mt-28 sm:mb-28 mb-28 w-[min(100%, 38rem)]"
+      className="scroll-mt-28 sm:mb-18 mb-8 w-[min(100%, 38rem)]"
       initial={{
         opacity: 0,
       }}
