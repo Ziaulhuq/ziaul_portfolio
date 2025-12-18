@@ -4,13 +4,13 @@ import SectionHeadings from "./sectionheading";
 import { Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { useActionState } from "react";
-import { handleFormData } from "@/action/server-action";
+import { type FormState, handleFormData } from "@/action/server-action";
 
 const Contact = () => {
-  const [formState, formAction, isPending] = useActionState(
-    handleFormData,
-    "null"
-  );
+  const [currentState, formAction, isPending] = useActionState<
+    FormState,
+    FormData
+  >(handleFormData, {});
   return (
     <motion.section
       id="contact"
@@ -40,29 +40,31 @@ const Contact = () => {
           placeholder="Your email"
           className="h-14 rounded-lg border p-4 border-black/10 focus:border focus:border-black-10 hover:border hover:border-black-10 outline-black"
           maxLength={500}
+          disabled={isPending}
         />
         <textarea
           className="h-52 my-3 rounded-lg border border-black/10 p-4 outline-black"
           placeholder="Your message"
           name="message"
           maxLength={500}
+          disabled={isPending}
         ></textarea>
         <button
           type="submit"
           className="group flex justify-center items-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-[0.9rem] text-white hover:bg-gray-950 rounded-full outline-none focus:scale-110 hover:scale-110 transition-all active:scale-105"
         >
-          Submit{" "}
+          {isPending ? "submitting" : "submit"}{" "}
           <Send className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
         </button>
       </form>
       {isPending ? (
         <p className="text-center text-md font-semibold">Loading...</p>
-      ) : formState?.success ? (
+      ) : currentState?.success ? (
         <p className="text-center mt-3 text-green-700 font-semibold ">
-          {formState?.message}
+          {currentState?.message}
         </p>
       ) : (
-        formState?.success === false && (
+        currentState.success === false && (
           <p className="text-center text-md mt-3 font-semibold text-red-800">
             failed to send, Email & password cannot be empty
           </p>

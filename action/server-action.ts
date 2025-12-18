@@ -3,8 +3,16 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.EMAIL_API_KEY);
+export type FormState = {
+  success?: boolean;
+  error?: string;
+  message?: string;
+};
 
-export async function handleFormData(prevState: string, formData: FormData) {
+export async function handleFormData(
+  _prevState: FormState,
+  formData: FormData
+) {
   const email = formData.get("email");
   const message = formData.get("message");
 
