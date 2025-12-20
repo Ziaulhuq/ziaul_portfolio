@@ -13,7 +13,7 @@ const Intro = () => {
   return (
     <section
       id="home"
-      className="mb-28 ml-10 flex flex-col justify-around  text-center sm:mb-0 transition"
+      className="mb-28 flex flex-col justify-around  text-center sm:mb-0 transition"
     >
       <div className="flex items-center justify-center mt-7">
         <div className="mt-23 sm:mt-15 relative">
