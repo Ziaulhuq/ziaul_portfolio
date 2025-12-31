@@ -5,9 +5,6 @@ import { Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { useActionState } from "react";
 import { type FormState, handleFormData } from "@/action/server-action";
-import { SquareUserRound } from "lucide-react";
-import { Mail } from "lucide-react";
-import { MapPinHouse } from "lucide-react";
 
 const Contact = () => {
   const [currentState, formAction, isPending] = useActionState<
@@ -17,7 +14,7 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="scroll-mt-28 ml-1 sm:mb-20 mb-8 w-[75%]"
+      className="scroll-mt-28 ml-1 sm:mb-20 mb-8 bg-amber-400 w-[80%]"
       initial={{
         opacity: 0,
       }}
@@ -25,11 +22,11 @@ const Contact = () => {
         opacity: 1,
       }}
       transition={{
-        duration: 4,
+        duration: 1,
       }}
     >
       <SectionHeadings>Contact me</SectionHeadings>
-      <p className="text-[0.9rem] text-gray-700 text-center mb-6">
+      <p className="text-[0.9rem] text-gray-700 text-center mb-8">
         Please do contact me directly{" "}
         <a href="mailto:examplie@gmail.com" className="underline">
           example@gmail.com
@@ -37,41 +34,19 @@ const Contact = () => {
         or throughh this form
       </p>
 
-      <div className="grid grid-cols-1  sm:grid-col-3 md:grid-cols-5 gap-8 justify-around items-start">
-        <div className="col-span-2 flex flex-col gap-8 mt-10">
-          <h2 className="flex gap-3 font-bold">
-            <span className="text-purple-500">
-              <SquareUserRound />
-            </span>{" "}
-            +6588520107
-          </h2>
-          <p className="flex gap-3 font-black">
-            <span className="text-purple-500">
-              <Mail />
-            </span>
-            <span>ziaulhuqbe@gmail.com</span>
-          </p>
-          <p className="flex gap-3 font-semibold">
-            <span className="text-purple-500">
-              <MapPinHouse />
-            </span>
-            Blk 31 Telok Blangah Rise,
-            <br />
-            #10-326, Singapore - 090031
-          </p>
-        </div>
-        <div className="col-span-3 ">
+      <div className="flex flex-col sm:flex-row gap-[30px]">
+        <div className="order-2">
           <form action={formAction} className="flex flex-col mt-10">
             <input
               type="email"
               name="email"
               placeholder="Your email"
-              className="h-14 rounded-lg border p-4 border-purple-500 focus:border focus:border-black-10 hover:border hover:border-black-10 outline-black"
+              className="h-14 rounded-lg border p-4 border-black/10 focus:border focus:border-black-10 hover:border hover:border-black-10 outline-black"
               maxLength={500}
               disabled={isPending}
             />
             <textarea
-              className="h-52 my-3 rounded-lg border border-purple-500 p-4 outline-black"
+              className="h-52 my-3 rounded-lg border border-black/10 p-4 outline-black"
               placeholder="Your message"
               name="message"
               maxLength={500}
@@ -79,7 +54,7 @@ const Contact = () => {
             ></textarea>
             <button
               type="submit"
-              className="group flex justify-center items-center gap-2 h-[3rem] mx-auto w-[8rem] bg-gradient-to-b from-purple-600 via-sky-600 to-purple-700 text-[0.9rem] text-white hover:bg-gray-950 rounded-full outline-none focus:scale-110 font-bold  hover:scale-110 transition-all active:scale-105 mb-4"
+              className="group flex justify-center items-center gap-2 h-[3rem] mx-auto w-[8rem] bg-gray-900 text-[0.9rem] text-white hover:bg-gray-950 rounded-full outline-none focus:scale-110 hover:scale-110 transition-all active:scale-105 mb-4"
             >
               {isPending ? "submitting" : "submit"}{" "}
               <Send className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -98,6 +73,10 @@ const Contact = () => {
               </p>
             )
           )}
+        </div>
+        <div className="flex-1 flex-col flex items-start md:justify-center order-1 md:order-none ">
+          <h2>Contact No : +6588520107</h2>
+          <p>Email : ziaulhuqbe@gmail.com</p>
         </div>
       </div>
     </motion.section>

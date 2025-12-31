@@ -109,3 +109,65 @@ export const skillsData = [
   "PostgreSQL",
   "Framer Motion",
 ] as const;
+
+// export const Icons = [
+//   "assets/icon-1.svg",
+//   "/icon-2.svg",
+//   "/icon-3.svg",
+//   "/icon-4.svg",
+//   "/icon-5.svg",
+//   "/icon-6.svg",
+//   "/icon-7.svg",
+//   "/icon-8.svg",
+// ] as const;
+
+// export const Icons = [
+//   {
+//     src: "assets/icon-1.svg",
+//     alt: "HTML5",
+//     width: 40,
+//     height: 40,
+//   },
+//   {
+//     src: "assets/icon-2.svg",
+//     alt: "HTML5",
+//     width: 40,
+//     height: 40,
+//   },
+//   {
+//     src: "assets/icon-3.svg",
+//     alt: "HTML5",
+//     width: 40,
+//     height: 40,
+//   },
+//   {
+//     src: "assets/icon-4.svg",
+//     alt: "HTML5",
+//     width: 40,
+//     height: 40,
+//   },
+//   {
+//     src: "assets/icon-5.svg",
+//     alt: "HTML5",
+//     width: 40,
+//     height: 40,
+//   },
+//   {
+//     src: "assets/icon-6.svg",
+//     alt: "HTML5",
+//     width: 40,
+//     height: 40,
+//   },
+//   {
+//     src: "assets/icon-7.svg",
+//     alt: "HTML5",
+//     width: 40,
+//     height: 40,
+//   },
+//   {
+//     src: "assets/icon-8.svg",
+//     alt: "HTML5",
+//     width: 40,
+//     height: 40,
+//   },
+// ] as const;

@@ -26,7 +26,7 @@ const ProjectList = ({ title, description, tags, imageUrl }: projectProps) => {
       className="mb-4 sm:mb-6 last:mb-0 group"
     >
       <section className="max-w-[42rem] bg-gray-100 border border-black/5 flex relative overflow-hidden  sm:h-[20rem] sm:pr-8 group-even:pl-8 rounded-lg hover:bg-gray-200 transition">
-        <div className="flex flex-col h-full pt-4 pb-8 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-1/2 group-even:ml-[18rem]">
+        <div className="flex flex-col h-full pt-4 pb-8 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-1/2 group-even:ml-[10rem] sm:group-even:ml-[20rem] w-[17rem]">
           <h3 className="text-xl font-semibold">{title}</h3>
           <p className="mt-2 text-[0.9rem] leading-relaxed sm:pr-8 text-gray-700">
             {description}
@@ -49,7 +49,7 @@ const ProjectList = ({ title, description, tags, imageUrl }: projectProps) => {
           width={200}
           height={200}
           priority
-          className="absolute top-8 -right-40 w-[28.25rem] shadow-2xl rounded-t-lg 
+          className="absolute top-8 -right-65 sm:-right-40 w-[28.25rem] shadow-2xl rounded-t-lg 
     group-hover:scale-[1.04]
 
     group-hover:translate-x-3
@@ -61,7 +61,8 @@ const ProjectList = ({ title, description, tags, imageUrl }: projectProps) => {
     group-even:group-hover:rotate-2
     
     group-even:right-[initial] 
-    group-even:-left-40
+    group-even:-left-70
+    sm:group-even:-left-40
     transition"
         />
       </section>

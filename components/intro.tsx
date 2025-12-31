@@ -13,7 +13,7 @@ const Intro = () => {
   return (
     <section
       id="home"
-      className="mb-28 flex flex-col justify-around  text-center sm:mb-0 transition"
+      className="mb-15 sm:mb-2 flex flex-col justify-around  text-center  transition"
     >
       <div className="flex items-center justify-center mt-7">
         <div className="mt-23 sm:mt-15 relative">
@@ -60,7 +60,7 @@ const Intro = () => {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm a ZIA UL HUQ.</span> I'm a{" "}
-        <span className="text-2xl font-extrabold inline-block bg-gradient-to-r from-purple-400 via-sky-600 to-purple-400 bg-clip-text text-transparent">
+        <span className="text-2xl font-semibold inline-block bg-gradient-to-r from-purple-400 via-sky-600 to-purple-400 bg-clip-text text-transparent">
           <Typewriter
             options={{
               strings: ["web developer", "UX designer", "Front end developer"],
