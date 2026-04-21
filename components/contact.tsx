@@ -100,7 +100,7 @@ const Contact = () => {
         </div>
         <div className="col-span-3 ">
           <form action={formAction} className="flex flex-col mt-10">
-            <input
+            {/* <input
               type="email"
               name="email"
               placeholder="Your email"
@@ -114,10 +114,37 @@ const Contact = () => {
               name="message"
               maxLength={500}
               disabled={isPending}
-            ></textarea>
+            ></textarea> */}
+            <div className="relative mb-5">
+              <input
+                type="text"
+                id="floating_outlined"
+                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-heading bg-transparent rounded-base rounded-xl border-1 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+                placeholder=" "
+              />
+              <label
+                htmlFor="floating_outlined"
+                className="absolute text-sm text-body duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-neutral-primary px-2 peer-focus:px-2 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-2 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+              >
+                Your Email
+              </label>
+            </div>
+            <div className="relative">
+              <textarea
+                id="floating_outlined"
+                className="block px-2.5 pb-2.5 pt-5 w-full text-sm text-heading bg-transparent h-32 rounded-base border-1 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer rounded-xl"
+                placeholder=" "
+              />
+              <label
+                htmlFor="floating_outlined"
+                className="absolute text-sm text-body duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-neutral-primary px-2 peer-focus:px-2 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-2 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+              >
+                Message
+              </label>
+            </div>
             <button
               type="submit"
-              className="group flex justify-center items-center gap-2 h-[3rem] mx-auto w-[8rem] bg-gradient-to-b from-purple-600 via-sky-600 to-purple-700 text-[0.9rem] text-white hover:bg-gray-950 rounded-full outline-none focus:scale-110 font-bold  hover:scale-110 transition-all active:scale-105 mb-4"
+              className="group flex justify-center items-center gap-2 h-[3rem] mx-auto w-[8rem] bg-gradient-to-b from-purple-600 via-sky-600 to-purple-700 text-[0.9rem] text-white hover:bg-gray-950 rounded-full outline-none focus:scale-110 font-bold  hover:scale-110 transition-all active:scale-105 mb-4 mt-7"
             >
               {isPending ? "submitting" : "submit"}{" "}
               <Send className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
