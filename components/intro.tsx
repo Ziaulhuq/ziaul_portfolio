@@ -84,7 +84,7 @@ const Intro = () => {
         animate={{ opacity: 1, y: 0 }}
       >
         <Link
-          href=""
+          href="#contact"
           className="group bg-gray-900 flex items-center rounded-4xl gap-2 px-7 py-3 text-white text-[0.8rem] outline-none font-medium focus:scale-110 hover:scale-110 cursor-pointer hover:bg-gray-950 active:scale-105 transition"
         >
           Contact me here
